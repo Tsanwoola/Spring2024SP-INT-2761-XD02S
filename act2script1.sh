@@ -1,16 +1,10 @@
 #!/bin/bash
 
-# Prompt the user to enter their name
-read -p "Please enter your name: " name
+# Prompt the user to enter their username
+read -p "Please enter your username: " username
 
-# Determine the current time
-current_time=$(date +"%H")
+# Display a welcome greeting message
+echo "Hello, $username. Welcome to your Virtual Machine!"
 
-# Greet the user based on the time of day
-if [ "$current_time" -lt 12 ]; then
-    echo "Good morning, $name!"
-elif [ "$current_time" -ge 12 ] && [ "$current_time" -lt 17 ]; then
-    echo "Good afternoon, $name!"
-else
-    echo "Good evening, $name!"
-fi
+# Redirect the output to a file called login.txt
+echo "Hello, $username. Welcome to your Virtual Machine!" >> login.txt
